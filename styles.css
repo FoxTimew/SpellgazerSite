@@ -1,0 +1,77 @@
+/* Réinitialisation des styles pour supprimer les marges et les rembourrages par défaut */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Styles pour le corps du document */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #00ff01;
+}
+
+/* Styles pour l'en-tête */
+header {
+    background: #333;
+    color: #fff;
+    padding: 1rem;
+    text-align: center;
+}
+
+    header h1 {
+        font-size: 2rem;
+    }
+
+/* Styles pour la navigation */
+nav ul {
+    list-style: none;
+}
+
+    nav ul li {
+        display: inline;
+    }
+
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            padding: 1rem;
+        }
+
+/* Styles pour le contenu principal */
+main {
+    padding: 2rem;
+}
+
+section {
+    margin-bottom: 2rem;
+}
+
+/* Styles pour le pied de page */
+footer {
+    background: #333;
+    color: #fff;
+    text-align: center;
+    padding: 1rem;
+}
+
+video {
+    width: 100vw;
+    height: auto;
+}
+
+.video-container {
+    position: absolute; /* Position initiale */
+}
+
+.video-follow {
+    position: fixed; /* Position fixe lorsqu'elle suit l'écran */
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#parallaxVideo {
+    height : 5000px
+}
