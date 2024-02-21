@@ -7,25 +7,22 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <header>
-        <h1>Spellgazer</h1>
-    </header>
+    <header></header>
 
     <main>
-        <section>
-            <h2>Section 1</h2>
-            <p>Ceci est le contenu de la section 1.</p>
-        </section>
-
-        <section id="parallaxVideo">
-            <h2>Section 2 - Parallax video</h2>
-            <div class="video-container" id="videoContainer">
-                <video>
-                    <source src="content/videos/placeholder.mp4" type="video/mp4" />
-                </video>
+        <section id="parallax-container">
+            <div class="parallax-anim" id="parallax-anim">
+                <img id="changingImage" src="content/images/anim/0000.jpg">
+                <img id="titleImage" src="content/images/title.png">
             </div>
         </section>
+        <div id="line-animation">
+            <div class="line" id="line"></div>
+            <img src="content/images/leftArrow.png" class="image image-start">
+            <img src="content/images/rightArrow.png" class="image image-end">
+        </div>
         <script src="javascript/script.js"></script>
+        <script src="javascript/fadeEffect.js"></script>
     </main>
 
     <footer>
