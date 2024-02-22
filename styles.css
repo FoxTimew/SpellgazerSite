@@ -19,7 +19,7 @@ p {
     justify-content: center;
     align-items: center;
     height: 100%; /* pour centrer l'image verticalement */
-    height: 5000px;
+    height: 10000px;
 }
 
 #changingImage {
@@ -40,29 +40,48 @@ p {
     transform: translate(-50%, -50%);
 }
 
-.line {
-    position: fixed;
+.arrow {
+    width: 2px;
+    height: 0;
+    position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+    animation: growArrow 2s forwards;
+}
+
+.arrow:before,
+.arrow:after {
+    content: '';
+    position: absolute;
+    top: 0;
     width: 0;
-    height: 2px; /* Épaisseur de la ligne */
-    background-color: black;
-    animation: growLine 2s forwards;
+    height: 0;
+    border: 8px solid transparent; /* Taille des pointes de la flèche */
+    border-top-color: white; /* Couleur des pointes de la flèche */
 }
 
-.image {
-    position: fixed;
-    top: 50%;
-    transition: opacity 0.5s, transform 2s;
+.arrow:before {
+    left: -15px; /* Position de la pointe gauche */
+    border-right: 4px solid white;
 }
 
-.image-start {
-    left: 20px;
+.arrow:after {
+    right: -15px; /* Position de la pointe droite */
+    border-left: 4px solid white;
 }
 
-.image-end {
-    right: 20px;
+.arrow-container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+}
+
+.arrow {
 }
 
 section {
@@ -81,11 +100,12 @@ footer {
     display: none;
 }
 
-@keyframes growLine {
+@keyframes growArrow {
     0% {
         width: 0;
     }
+
     100% {
-        width: 75%; /* Largeur de la ligne */
+        width: 75%;
     }
 }

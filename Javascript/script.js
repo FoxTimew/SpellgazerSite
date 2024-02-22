@@ -24,13 +24,13 @@ window.addEventListener('scroll', function() {
 function changeImage(frame) {     
     // Changez les images en fonction de la position de défilement
     if (frame < 10) {
-        image.src = 'content/images/anim/000' + frame + '.jpg';
+        image.src = 'content/images/Anims/000' + frame + '.png';
     } else if (frame < 100) {
-        image.src = 'content/images/anim/00' + frame + '.jpg';
-    } else if (frame <= 215) {
-        image.src = 'content/images/anim/0' + frame + '.jpg';
+        image.src = 'content/images/Anims/00' + frame + '.png';
+    } else if (frame <= 566) {
+        image.src = 'content/images/Anims/0' + frame + '.png';
     } else {
-        image.src = 'content/images/anim/0215.jpg';
+        image.src = 'content/images/Anims/0565.jpg';
         endPosition = window.scrollY;
         image.style.position = 'absolute';
         image.style.top = (window.scrollY + window.innerHeight / 2) + 'px';
