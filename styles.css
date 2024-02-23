@@ -1,8 +1,80 @@
+/* #region fonts */
+@font-face {
+    font-family: 'Garamond';
+    src: url('content/fonts/EBGaramond-Bold.ttf') format('ttf');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Garamond';
+    src: url('content/fonts/EBGaramond-BoldItalic.ttf') format('ttf');
+    font-weight: bold;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'GaramondExtra';
+    src: url('content/fonts/EBGaramond-ExtraBold.ttf') format('ttf');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'GaramondExtra';
+    src: url('content/fonts/EBGaramond-ExtraBoldItalic.ttf') format('ttf');
+    font-weight: bold;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Garamond';
+    src: url('content/fonts/EBGaramond-Italic.ttf') format('ttf');
+    font-weight: normal;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'GaramondMedium';
+    src: url('content/fonts/EBGaramond-Medium.ttf') format('ttf');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'GaramondMedium';
+    src: url('content/fonts/EBGaramond-MediumItalic.ttf') format('ttf');
+    font-weight: normal;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Garamond';
+    src: url('content/fonts/EBGaramond-Regular.ttf') format('ttf');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'GaramondSemiBold';
+    src: url('content/fonts/EBGaramond-SemiBold.ttf') format('ttf');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'GaramondSemiBold';
+    src: url('content/fonts/EBGaramond-SemiBoldItalic.ttf') format('ttf');
+    font-weight: normal;
+    font-style: italic;
+}
+/* #endregion */
+
+/* #region generic */
 body {
-    font-family: Arial, sans-serif;
+    font-family: Garamond;
     margin: 0;
     padding: 0;
-    position: relative;  
 }
 
 h1 {
@@ -11,8 +83,8 @@ h1 {
 
 h2 {
     color: #b59e69;
-    font-weight: 700;
-    text-align: left;
+    font-family: GaramondExtra;
+    font-size: xx-large;
     text-transform: uppercase;
 }
 
@@ -20,60 +92,82 @@ p {
     color: #666;
 }
 
-#parallax-container{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 10000px;
-}
-
-#changingImage {
-    position: fixed; /* Image en position fixe par défaut */
-    top: 50%; /* Au centre vertical */
-    left: 50%; /* Au centre horizontal */
-    width: 100vw;
-    height: auto;
-    transform: translate(-50%, -50%); /* Centrage parfait */
-    z-index: -1; /* Assurez-vous que l'image est au-dessus du contenu */
-}
-
-#titleImage {
-    display: flex;
-    position: fixed;
-    top: 50%; /* Au centre vertical */
-    left: 50%;
-    transform: translate(-50%, -50%);
-}
-
 section {
     margin-bottom: 2rem;
-}
-
-#trailer-container {
-    width: 50vw;
-    height: auto;
-    margin-left: auto;
-    margin-right: auto;
-    background-image: url('content/images/blackBackground.jpg');
-}
-
-.player {
-    width :100%;
-    margin-left: auto;
-    margin-right: auto;
-}
-/* Styles pour le pied de page */
-footer {
-    background: #333;
-    color: #fff;
-    text-align: center;
-    padding: 1rem;
 }
 
 .hidden {
     display: none;
 }
 
+footer {
+    background: #333;
+    color: #fff;
+    text-align: center;
+    padding: 1rem;
+}
+/* #endregion */
+
+/* #region main */
+
+/* #region onboard */
+#onboard-anim {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 10000px;
+}
+
+#img-scroll {
+    position: fixed; 
+    top: 50%;
+    left: 50%;
+    width: 100vw;
+    height: auto;
+    transform: translate(-50%, -50%);
+    z-index: -1;
+}
+
+#SG-logo {
+    display: flex;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+/* #endregion */
+/* #region game-description */
+#game-description {
+
+}
+
+.subtitle-container {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+}
+
+/* #region trailer */
+#trailer-container {
+    width: 50vw;
+    height: auto;
+    margin-left: auto;
+    margin-right: auto;
+    background-image: url('content/images/game_description/black_background.jpg');
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    align-items: center;
+    padding-top: 20px;
+    padding-bottom: 50px;
+}
+/* #endregion */
+/* #endregion */
+
+/* #endregion */
+
+/* #region animations */
 @keyframes growArrow {
     0% {
         width: 0;
@@ -83,3 +177,4 @@ footer {
         width: 75%;
     }
 }
+/* #endregion*/
