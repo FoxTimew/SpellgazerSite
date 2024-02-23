@@ -3,14 +3,6 @@
   "WorkspaceRootPath": "C:\\Users\\Foxti\\Documents\\Accroche\\SpellgazerSite\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Foxti\\Documents\\Accroche\\SpellgazerSite\\Javascript\\fadeEffect.js||{3B902123-F8A7-4915-9F01-361F908088D0}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Javascript\\fadeEffect.js||{3B902123-F8A7-4915-9F01-361F908088D0}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Foxti\\Documents\\Accroche\\SpellgazerSite\\Javascript\\script.js||{3B902123-F8A7-4915-9F01-361F908088D0}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Javascript\\script.js||{3B902123-F8A7-4915-9F01-361F908088D0}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Foxti\\Documents\\Accroche\\SpellgazerSite\\styles.css||{3B902123-F8A7-4915-9F01-361F908088D0}",
       "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:styles.css||{3B902123-F8A7-4915-9F01-361F908088D0}"
     },
@@ -19,8 +11,20 @@
       "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:main.html||{3B902123-F8A7-4915-9F01-361F908088D0}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Foxti\\Documents\\Accroche\\SpellgazerSite\\Javascript\\parallax.js||{3B902123-F8A7-4915-9F01-361F908088D0}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Javascript\\parallax.js||{3B902123-F8A7-4915-9F01-361F908088D0}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Foxti\\Documents\\Accroche\\SpellgazerSite\\Javascript\\trailer.js||{3B902123-F8A7-4915-9F01-361F908088D0}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Javascript\\trailer.js||{3B902123-F8A7-4915-9F01-361F908088D0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Foxti\\Documents\\Accroche\\SpellgazerSite\\Javascript\\script.js||{3B902123-F8A7-4915-9F01-361F908088D0}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Javascript\\script.js||{3B902123-F8A7-4915-9F01-361F908088D0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Foxti\\Documents\\Accroche\\SpellgazerSite\\Javascript\\fadeEffect.js||{3B902123-F8A7-4915-9F01-361F908088D0}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Javascript\\fadeEffect.js||{3B902123-F8A7-4915-9F01-361F908088D0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Foxti\\Documents\\Accroche\\SpellgazerSite\\Javascript\\arrow.js||{3B902123-F8A7-4915-9F01-361F908088D0}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Javascript\\arrow.js||{3B902123-F8A7-4915-9F01-361F908088D0}"
     }
   ],
   "DocumentGroupContainers": [
@@ -34,13 +38,13 @@
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 1,
               "Title": "main.html",
               "DocumentMoniker": "C:\\Users\\Foxti\\Documents\\Accroche\\SpellgazerSite\\main.html",
               "RelativeDocumentMoniker": "main.html",
               "ToolTip": "C:\\Users\\Foxti\\Documents\\Accroche\\SpellgazerSite\\main.html",
               "RelativeToolTip": "main.html",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABEAAAASAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABcAAAAqAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
               "WhenOpened": "2024-02-21T12:42:06.428Z",
               "EditorCaption": ""
@@ -53,13 +57,13 @@
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 0,
               "Title": "styles.css",
               "DocumentMoniker": "C:\\Users\\Foxti\\Documents\\Accroche\\SpellgazerSite\\styles.css",
               "RelativeDocumentMoniker": "styles.css",
               "ToolTip": "C:\\Users\\Foxti\\Documents\\Accroche\\SpellgazerSite\\styles.css",
               "RelativeToolTip": "styles.css",
-              "ViewState": "AQIAAB4AAAAAAAAAAAAAAC0AAAAOAAAA",
+              "ViewState": "AQIAACEAAAAAAAAAAAAAADwAAAAKAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
               "WhenOpened": "2024-02-21T12:42:11.766Z",
               "EditorCaption": ""
@@ -68,45 +72,58 @@
         },
         {
           "DockedWidth": 643,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 3,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 3,
               "Title": "script.js",
               "DocumentMoniker": "C:\\Users\\Foxti\\Documents\\Accroche\\SpellgazerSite\\Javascript\\script.js",
               "RelativeDocumentMoniker": "Javascript\\script.js",
               "ToolTip": "C:\\Users\\Foxti\\Documents\\Accroche\\SpellgazerSite\\Javascript\\script.js",
               "RelativeToolTip": "Javascript\\script.js",
-              "ViewState": "AQIAABcAAAAAAAAAAAAAACMAAAAOAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
-              "WhenOpened": "2024-02-21T12:42:14.855Z",
+              "WhenOpened": "2024-02-22T18:43:15.529Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "arrow.js",
+              "DocumentMoniker": "C:\\Users\\Foxti\\Documents\\Accroche\\SpellgazerSite\\Javascript\\arrow.js",
+              "RelativeDocumentMoniker": "Javascript\\arrow.js",
+              "ToolTip": "C:\\Users\\Foxti\\Documents\\Accroche\\SpellgazerSite\\Javascript\\arrow.js",
+              "RelativeToolTip": "Javascript\\arrow.js",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
+              "WhenOpened": "2024-02-22T17:10:41.693Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 4,
-              "Title": "parallax.js",
-              "DocumentMoniker": "C:\\Users\\Foxti\\Documents\\Accroche\\SpellgazerSite\\Javascript\\parallax.js",
-              "RelativeDocumentMoniker": "Javascript\\parallax.js",
-              "ToolTip": "C:\\Users\\Foxti\\Documents\\Accroche\\SpellgazerSite\\Javascript\\parallax.js",
-              "RelativeToolTip": "Javascript\\parallax.js",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAIAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
-              "WhenOpened": "2024-02-21T20:41:01.19Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
               "Title": "fadeEffect.js",
               "DocumentMoniker": "C:\\Users\\Foxti\\Documents\\Accroche\\SpellgazerSite\\Javascript\\fadeEffect.js",
               "RelativeDocumentMoniker": "Javascript\\fadeEffect.js",
               "ToolTip": "C:\\Users\\Foxti\\Documents\\Accroche\\SpellgazerSite\\Javascript\\fadeEffect.js",
               "RelativeToolTip": "Javascript\\fadeEffect.js",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA4AAAAgAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
               "WhenOpened": "2024-02-21T22:36:17.859Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "trailer.js",
+              "DocumentMoniker": "C:\\Users\\Foxti\\Documents\\Accroche\\SpellgazerSite\\Javascript\\trailer.js",
+              "RelativeDocumentMoniker": "Javascript\\trailer.js",
+              "ToolTip": "C:\\Users\\Foxti\\Documents\\Accroche\\SpellgazerSite\\Javascript\\trailer.js",
+              "RelativeToolTip": "Javascript\\trailer.js",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAcAAAAVAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
+              "WhenOpened": "2024-02-22T18:43:03.609Z",
               "EditorCaption": ""
             }
           ]

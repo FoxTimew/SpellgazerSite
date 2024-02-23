@@ -30,7 +30,7 @@ function changeImage(frame) {
     } else if (frame <= 566) {
         image.src = 'content/images/Anims/0' + frame + '.png';
     } else {
-        image.src = 'content/images/Anims/0565.jpg';
+        image.src = 'content/images/Anims/0566.png';
         endPosition = window.scrollY;
         image.style.position = 'absolute';
         image.style.top = (window.scrollY + window.innerHeight / 2) + 'px';

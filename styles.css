@@ -2,12 +2,18 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f14ffd;
-    position: relative; /* Ajout d'une position relative pour référence */ 
+    position: relative;  
 }
 
 h1 {
     color: #333;
+}
+
+h2 {
+    color: #b59e69;
+    font-weight: 700;
+    text-align: left;
+    text-transform: uppercase;
 }
 
 p {
@@ -18,7 +24,6 @@ p {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100%; /* pour centrer l'image verticalement */
     height: 10000px;
 }
 
@@ -40,54 +45,23 @@ p {
     transform: translate(-50%, -50%);
 }
 
-.arrow {
-    width: 2px;
-    height: 0;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    animation: growArrow 2s forwards;
-}
-
-.arrow:before,
-.arrow:after {
-    content: '';
-    position: absolute;
-    top: 0;
-    width: 0;
-    height: 0;
-    border: 8px solid transparent; /* Taille des pointes de la flèche */
-    border-top-color: white; /* Couleur des pointes de la flèche */
-}
-
-.arrow:before {
-    left: -15px; /* Position de la pointe gauche */
-    border-right: 4px solid white;
-}
-
-.arrow:after {
-    right: -15px; /* Position de la pointe droite */
-    border-left: 4px solid white;
-}
-
-.arrow-container {
-    position: relative;
-    width: 100%;
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    z-index: 1;
-}
-
-.arrow {
-}
-
 section {
     margin-bottom: 2rem;
 }
 
+#trailer-container {
+    width: 50vw;
+    height: auto;
+    margin-left: auto;
+    margin-right: auto;
+    background-image: url('content/images/blackBackground.jpg');
+}
+
+.player {
+    width :100%;
+    margin-left: auto;
+    margin-right: auto;
+}
 /* Styles pour le pied de page */
 footer {
     background: #333;
