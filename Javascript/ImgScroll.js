@@ -1,10 +1,20 @@
 var image = document.getElementById('img-scroll');
 var isAnimationFinished = true;
-var endPosition = -1;
+var endPosition = 7358;
+
+image.addEventListener('load', function() {
+    HeroAnimationManager();
+    if (window.scrollY >= endPosition) FinishedAnimation();
+});
 
 window.addEventListener('scroll', function () {
-    var scrollPosition = Math.ceil(window.scrollY / 13);
-    document.getElementById('img-scroll-anim').style.height = 7358 + (window.innerHeight)+'px';
+    HeroAnimationManager();
+});
+
+function HeroAnimationManager(){
+        var scrollPosition = Math.ceil(window.scrollY / 13);
+    document.getElementById('img-scroll-anim').style.height = 7358 + image.offsetHeight+'px';
+    
     if (isAnimationFinished) {
         changeImage(scrollPosition);
     }
@@ -13,7 +23,7 @@ window.addEventListener('scroll', function () {
         image.style.position = 'fixed';
         image.style.top = '0px';
     }
-});
+}
 
 function changeImage(frame) {     
     // Changez les images en fonction de la position de défilement
@@ -24,13 +34,15 @@ function changeImage(frame) {
     } else if (frame <= 566) {
         image.src = 'content/images/img_scroll_anim/0' + frame + '.avif';
     } else {
+        FinishedAnimation();
+    }
+}
+
+function FinishedAnimation() {
         isAnimationFinished = false;
         image.src = 'content/images/img_scroll_anim/0566.avif';
         image.style.position = 'absolute';
         image.style.top = 7358 + 'px';
-        endPosition = window.scrollY;
-        console.log(endPosition);
-    }
 }
 
 console.log("imgScroll loaded");

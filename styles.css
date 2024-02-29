@@ -90,6 +90,14 @@ h2 {
     text-transform: uppercase;
 }
 
+.flex {
+    display: flex;
+}
+
+.text-uppercade {
+    text-transform: uppercase;
+}
+
 footer {
     background: #333;
     color: #fff;
@@ -101,7 +109,7 @@ footer {
 /* #region main */
 
 /* #region onboard */
-#onboard-anim {
+.onboard-anim {
     display: flex;
     width: 100vw;
 }
@@ -129,8 +137,32 @@ footer {
 }
 /* #endregion */
 /* #region game-description */
-#game-description {
+.game-description {
+    width: 50vw;
+    margin-left: auto;
+    margin-right: auto;
+}
 
+.extremity {
+    background-image: url('content/images/game_description/black_top_border_background.png');
+    width: auto;
+    height: 42px;
+}
+
+#sub-footer {
+    transform: scaleY(-1);
+    background-color: #18473d;
+}
+
+/* #region trailer */
+#trailer-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 20px;
+    padding-bottom: 50px;
+    background-image: url('content/images/game_description/black_background.jpg');
+    gap: 50px;
 }
 
 .subtitle-container {
@@ -138,34 +170,220 @@ footer {
     display: flex;
     flex-direction: row;
     gap: 20px;
-}
-
-/* #region trailer */
-#trailer-container {
-    width: 50vw;
-    height: auto;
-    margin-left: auto;
-    margin-right: auto;
-    background-image: url('content/images/game_description/black_background.jpg');
-    display: flex;
-    gap: 50px;
     align-items: center;
+}
+/* #endregion */
+/* #endregion */
+#environment-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #18473d;
     padding-top: 20px;
     padding-bottom: 50px;
+    gap: 20px;
+    overflow: hidden;
+}
+
+.carousel {
+    width: 75%;
+    overflow: hidden;
+    margin: 0;
+    flex-direction: column;
+    align-items: center;
+}
+
+.carousel-container {
+    display: flex;
+    transition: transform 0.5s ease;
+}
+
+.carousel-item {
+    flex: 0 0 100%;
+    text-align: center;
+}
+
+.carousel-item img {
+    width: 100%;
+    height: auto;
+}
+
+.carousel-button-container {
+    flex-direction: row;
+    align-items: center;
+}
+
+.carousel-button-arrow {
+    background-image: url('content/images/carousel/right_button.png');
+    background-size: cover;
+    background-color: transparent;
+    width: 44px; 
+    height: 34px; 
+    border: none;
+    cursor: pointer; 
+    transition: filter 0.3s ease;
+    animation: UnhoverArrowButton 0.3s forwards;
+}
+
+.carousel-button-arrow:hover {
+    filter: brightness(1.2);
+    animation: HoverArrowButton 0.3s forwards;
+}
+.previous {
+    transform: scaleX(-1);
+}
+
+.carousel-button-item {
+    background-image: url('content/images/carousel/unselected_puce.png');
+    background-size: cover;
+    background-color: transparent;
+    width: 30px; 
+    height: 31px; 
+    margin: 0 10px;
+    border: none;
+    cursor: pointer; 
+    transition: filter 0.3s ease;    
+}
+
+.carousel-button-item.active {
+    background-image: url('content/images/carousel/selected_puce.png');
+    background-size: cover;
+    background-color: transparent;
+    width: 65px; 
+    height: 66px; 
+    margin: 0 -7.5px;
+    border: none;
+    pointer-events: none;
+}
+
+.carousel-button-item:hover {
+    filter: brightness(1.2);
 }
 /* #endregion */
-/* #endregion */
 
-/* #endregion */
+.arrow-underline {
+    animation: growArrow 3s forwards;
+    position: relative;
+    width: 10px;
+    height: 2px;
+    background-color: white;
+    margin: 0 auto;
+    flex-direction: row;
+    align-items: center;
+}
+
+.left-arrow {
+    left: 0;
+    filter: invert(100%);
+    background-color: transparent;
+}
+
+.right-arrow {
+    transform: scaleX(-1);
+    position: absolute;
+    right: 0;
+    filter: invert(100%);
+    background-color: transparent;
+}
+
+.slideInUp {
+    opacity: 0;
+    margin-top: 100px;
+    animation: SlideInUp 2s forwards;
+}
+
+.slideInSide {
+    opacity: 0;
+    width: 120%;
+    animation: SlideInSide 2s forwards;
+}
+
+.video-container {
+    position: relative;
+    width: 80%;
+    padding-bottom: 45%;
+}
+
+#player {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
 
 /* #region animations */
 @keyframes growArrow {
     0% {
-        width: 0;
+        width: 10px;
     }
 
     100% {
-        width: 75%;
+        width: 80%;
+    }
+}
+
+@keyframes HoverArrowButton {
+    from {
+        background-position: 0 0;
+    }
+    to {
+        background-position: 5px 0;
+    }
+}
+
+@keyframes UnhoverArrowButton {
+    from {
+        background-position: 5px 0;
+    }
+    to {
+        background-position: 0 0;
+    }*/
+}
+
+@keyframes SlideInUp {
+    0% {
+        opacity: 0;
+        margin-top: 100px;
+    }
+    100% {
+        opacity: 1;
+        margin-top: 0;
+    }
+}
+
+.logo-button {
+    width: 5rem;
+    height: 5rem;
+    background-size: cover;
+}
+
+.spellgazer {
+    background-image: url('content/images/SG_logo.png')
+}
+
+.rubika {
+    background-image: url('content/images/rubika.png');
+}
+
+@keyframes SlideInSide {
+    0% {
+        opacity: 0;
+        width: 120%;
+    }
+    100% {
+        opacity: 1;
+        width: 100%;
     }
 }
 /* #endregion*/
+
+@media (max-width: 800px) {
+    .onboard-anim {
+        display: none;
+    }
+
+    .game-description {
+        width: 100%;
+    }
+}
