@@ -196,7 +196,7 @@ footer {
     align-items: center;
     padding-top: 20px;
     padding-bottom: 50px;
-    background-image: url('content/images/game_description/black_background.jpg');
+    background-image: url('content/images/game_description/black_background.png');
     gap: 50px;
 }
 
@@ -206,8 +206,12 @@ footer {
     align-items: center;
     padding-top: 20px;
     padding-bottom: 50px;
-    background-image: url('content/images/game_description/gold_background.jpg');
+    background-image: url('content/images/game_description/gold_background.png');
     gap: 50px;
+}
+
+.gold {
+
 }
 
 .subtitle-container {
