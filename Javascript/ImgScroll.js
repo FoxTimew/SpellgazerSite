@@ -2,8 +2,8 @@ var image = document.getElementById('img-scroll');
 var isAnimationFinished = true;
 var endPosition = 7358;
 
-image.addEventListener('load', function() {
     HeroAnimationManager();
+image.addEventListener('load', function() {
     if (window.scrollY >= endPosition) FinishedAnimation();
 });
 
@@ -12,7 +12,7 @@ window.addEventListener('scroll', function () {
 });
 
 function HeroAnimationManager(){
-        var scrollPosition = Math.ceil(window.scrollY / 13);
+    var scrollPosition = Math.ceil(window.scrollY / 13);
     document.getElementById('img-scroll-anim').style.height = 7358 + image.offsetHeight+'px';
     
     if (isAnimationFinished) {
@@ -41,8 +41,6 @@ function changeImage(frame) {
 function FinishedAnimation() {
         isAnimationFinished = false;
         image.src = 'content/images/img_scroll_anim/0566.avif';
-        image.style.position = 'absolute';
-        image.style.top = 7358 + 'px';
 }
 
 console.log("imgScroll loaded");

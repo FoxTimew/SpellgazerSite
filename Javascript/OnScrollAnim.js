@@ -22,7 +22,6 @@ const observer = new IntersectionObserver(removeAnimationPrefix, {
 // Sélectionne tous les éléments avec une classe commençant par "anim-"
 const animatedElements = document.querySelectorAll('.onScrollAnim');
         
-console.log(animatedElements.length);
 // Ajoute chaque élément à l'observateur Intersection Observer
 animatedElements.forEach(element => {
     observer.observe(element);

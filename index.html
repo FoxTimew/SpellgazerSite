@@ -13,10 +13,19 @@
     <main>
         <section class="onboard-anim">
             <div id="img-scroll-anim">
+                <pre class="catch-phrase" id="first-catch">in a world where magic
+was sealed...
+                </pre>
+                <pre class="catch-phrase" id="second-catch">learn and experiment
+with forgotten spells...
+</pre>
+                <p class="catch-phrase" id="third-catch">to take back the astral magic</p>
                 <img id="img-scroll" src="content/images/img_scroll_anim/0000.avif">
                 <img id="SG-logo" src="content/images/SG_logo.png">
             </div>
         </section>
+
+        <div id="black-background"></div>
 
         <div class="loader-container">
             <div class="loader"></div>
@@ -84,26 +93,58 @@
                     </div>
                 </div>
             </nav>
+            <div class="extremity" style="background-color: #18473d"></div>
+
+            <nav class="lore-container">
+                <div class="subtitle-container onScrollAnim anim-slideInSide">
+                    <img src="content/images/game_description/gold_subtitle_ornament.png">
+                    <h2 style="color: #141311;">A world steeped in fascinating history</h2>
+                </div>
+
+                <p class="lore-text">A long time ago, in a world where magic comes from the stars and is as common as fire, a group of talented individuals reunited at the top of the tallest mountain to study the heavenly bodies in order to better understand this power and how to control it.</p>
+                <div class="lore-img"><img src="content/images/lore/inside.avif"></div>
+                
+                <div class="onScrollAnim anim-arrow-underline flex">
+                    <img class="left-arrow" src="content/images/arrow.png">
+                    <img class="right-arrow" src="content/images/arrow.png">
+                </div>
+                
+                <div class="spellgazer-lore">
+                    <p class="lore-text">Those were the first Spellgazers, who shared their knowledge with the world, bringing its civilizations to prosperity.</p>
+                    <div class="lore-img character"><img src="content/images/lore/spellgazer.png"></div>
+                </div>
+
+                <div class="onScrollAnim anim-arrow-underline flex">
+                    <img class="left-arrow" src="content/images/arrow.png">
+                    <img class="right-arrow" src="content/images/arrow.png">
+                </div>
+
+                <p class="lore-text">And then one day, a great fog engulfed the world, cutting its connection to the stars, resulting in the disappearance of magic and the Spellgazers who mastered it.</p>
+                <div class="lore-img"><img src="content/images/lore/fog.avif"></div>
+                
+                <div class="onScrollAnim anim-arrow-underline flex">
+                    <img class="left-arrow" src="content/images/arrow.png">
+                    <img class="right-arrow" src="content/images/arrow.png">
+                </div>
+
+                <p class="lore-text">Many searched the lost sanctuary of the Spellgazers in search for answers for their vanishment and to retrieve the magic, and all of them, without exception, were lost to the fog.</p>
+                <div class="lore-img"><img src="content/images/lore/global.avif"></div>
+                <p class="lore-text">...until you arrived.</p>
+            </nav>
         </section>
-        
-        <div class="arrow-container">
-            <div class="arrow"></div>
-        </div>
 
         <script src="javascript/Loader.js"></script>
         <script src="javascript/ImgScroll.js"></script>
         <script src="javascript/OnScrollAnim.js"></script>
         <script src="javascript/FadeEffects.js"></script>
         <script src="javascript/Carousel.js"></script>
-        <script src="javascript/YoutubeVideos.js"></script>
-        <script src="https://www.youtube.com/iframe_api"></script>
     </main>
 
-    <footer class="flex" style="align-items: center;">
-        <div class="flex" style="flex-direction: row; align-items: center; gap: 10px;">
-            <button class="logo-button spellgazer"><a href="#">/<a></button>
-            <p style="font-color: white;">X</p>
-            <button class="logo-button rubika"><a href="https://rubika-edu.com"></a></button>
+    <footer>
+        <div class="flex" style="flex-direction: row; align-items: center; gap: 20px;">
+            <a class="logo-button spellgazer" href="#"></a>
+            <p class="footer-text">X</p>
+            <a class="logo-button rubika" href="https://rubika-edu.com"></a>
         </div>
     </footer>
 </body>
