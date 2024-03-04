@@ -42,7 +42,7 @@ function UpDate() {
 
     if (scrollPosition >= 7358 + window.innerHeight / 2 - 176/2) {
         elements[3].style.position = 'absolute';
-        elements[3].style.top = 7358 + window.innerHeight - 176/2 + 'px';
+        elements[3].style.top = 7358 + window.innerHeight - 176/2 -42 + 'px';
         elements[3].style.zIndex = '1';
         background.style.backgroundColor = 'rgba(0, 0, 0, 0.6)';
         background.style.backdropFilter = 'blur(4px)';

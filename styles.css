@@ -75,7 +75,7 @@ body {
     font-family: Garamond;
     margin: 0;
     padding: 0;
-    width: 100ew;
+    width: 100vw;
     overflow-x : hidden;
 }
 
@@ -85,10 +85,12 @@ main {
 }
 
 .catch-phrase {
-    -webkit-text-stroke: 2px black;
+    /*-webkit-text-stroke: 2px black;*/
     text-transform: uppercase;
     font-size: 100px;
     font-family: GaramondExtra;
+    font-weight: bold;
+    letter-spacing: .5rem;
     color: white;
     z-index: -11;
     text-align: center;
@@ -110,6 +112,16 @@ main {
     width: 100vw;
     height: 100vh;
     z-index: -9;
+}
+
+.catch-background {
+    position: absolute;
+    width: 100vw;
+    height: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgba(0, 0, 0, .5);
+    z-index: -1;
 }
 
 h2 {
@@ -182,11 +194,14 @@ footer {
     background-image: url('content/images/game_description/black_top_border_background.png');
     width: auto;
     height: 42px;
+    margin-top: -42px;
 }
 
 #sub-footer {
     transform: scaleY(-1);
-    background-color: #18473d;
+    background-color: #0000;
+    margin-top: 0px;
+    margin-bottom: -42px;
 }
 
 /* #region trailer */
@@ -198,6 +213,18 @@ footer {
     padding-bottom: 50px;
     background-image: url('content/images/game_description/black_background.png');
     gap: 50px;
+    overflow: hidden;
+}
+
+#gameplay-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 20px;
+    padding-bottom: 50px;
+    background-image: url('content/images/game_description/black_background.png');
+    gap: 50px;
+    overflow: hidden;
 }
 
 .lore-container {
@@ -210,8 +237,92 @@ footer {
     gap: 50px;
 }
 
-.gold {
+.gameplay-catch {
+    font-family: GaramondExtra;
+    text-align: center;
+    font-size: xx-large;
+    font-weight: bold;
+    font-style: italic;
+    color: #b59e69;
+    text-transform: uppercase;
+}
 
+.solas-container {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.solas-text-container {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    width: 40%;
+    height: auto;
+    font-size: x-large;
+    font-weight: bold;
+    color: #b59e69;
+    text-align: center;
+    --s: 10px; /* control the size */
+    padding: var(--s);
+    border: calc(2*var(--s)) solid #0000;
+    outline: 1px solid #b59e69;
+    outline-offset: calc(-1*var(--s));
+    background: conic-gradient(from 90deg at 1px 1px,#18473d 25%,#b59e69 0);
+}
+
+.solas-title {
+    font-size: xx-large;
+    text-transform:uppercase;
+}
+
+.solas-img {
+    height: 50vh;
+    margin-left: -60px; 
+    z-index: 2;
+}
+
+.text-intro-gameplay {
+    width: 75%;
+    font-size: x-large;
+    font-weight: bold;
+    text-align: center;
+    color: #b59e69;
+    --s: 10px; /* control the size */
+    padding: var(--s);
+    border: calc(2*var(--s)) solid #0000;
+    outline: 1px solid #b59e69;
+    outline-offset: calc(-1*var(--s));
+    background: conic-gradient(from 90deg at 1px 1px,#0000 25%,#b59e69 0);
+}
+
+.objective-text {
+    text-align: center;
+    font-size: xx-large;
+    font-weight: bold;
+    text-transform: uppercase;
+    width: 85%;
+    color: #b59e69;
+    --s: 10px; /* control the size */
+    padding: var(--s);
+    border: calc(2*var(--s)) solid #0000;
+    outline: 1px solid #b59e69;
+    outline-offset: calc(-1*var(--s));
+    background: conic-gradient(from 90deg at 1px 1px,#18473d 100%,#b59e69 0);
+}
+
+#objective-container {
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 50px;
+    padding-top: 50px;
+    background-image: url('content/images/objective/background.avif');
+    background-size: 100%;
+    align-items: center;
 }
 
 .subtitle-container {
