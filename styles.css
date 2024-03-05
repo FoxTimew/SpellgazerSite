@@ -69,14 +69,13 @@
     font-style: italic;
 }
 /* #endregion */
-
 /* #region generic */
 body {
     font-family: Garamond;
     margin: 0;
     padding: 0;
     width: 100vw;
-    overflow-x : hidden;
+    overflow: hidden;
 }
 
 main {
@@ -85,7 +84,6 @@ main {
 }
 
 .catch-phrase {
-    /*-webkit-text-stroke: 2px black;*/
     text-transform: uppercase;
     font-size: 100px;
     font-family: GaramondExtra;
@@ -146,7 +144,8 @@ footer {
     background-color: rgba(25, 25, 25, 0.8);
     backdrop-filter: blur(5px);
     text-align: center;
-    padding: 1rem;
+    width: 100vw;
+    overflow-x: hidden;
 }
 
 .footer-text {
@@ -163,6 +162,7 @@ footer {
 .onboard-anim {
     display: flex;
     width: 100vw;
+
 }
 
 #img-scroll-anim {
@@ -171,8 +171,10 @@ footer {
 
 #img-scroll {
     position: fixed;
-    width: 100%;
+    width: 1920px;
     z-index: -10;
+    left: 50%;
+    transform: translateX(-50%);
 }
 
 #SG-logo {
@@ -238,6 +240,7 @@ footer {
 }
 
 .gameplay-catch {
+    gap: 5px;
     font-family: GaramondExtra;
     text-align: center;
     font-size: xx-large;
@@ -500,7 +503,6 @@ footer {
     font-size: x-large;
     text-align: center;
     font-weight: bold;
-    font-style: italic;
 }
 
 .lore-img {
@@ -605,7 +607,7 @@ footer {
 }
 /* #endregion*/
 
-@media (max-width: 800px) {
+@media screen and (max-width: 1000px) {
     .onboard-anim {
         display: none;
     }
@@ -613,4 +615,58 @@ footer {
     .game-description {
         width: 100%;
     }
+}
+
+@media screen and (max-width: 1600px) {
+    .catch-phrase {
+        font-size: 40px;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .spellgazer-lore {
+        flex-direction: column;
+    }
+
+    .spellgazer-lore .lore-text {
+        width: 80%;
+    }
+
+    .character {
+        width: 80%;
+    }
+
+    .carousel {
+        width : 100%;
+    }
+
+    .solas-container {
+        flex-direction: column-reverse;
+    }
+
+    .solas-text-container {
+        width: 60%;
+    }
+
+    .gameplay-catch {
+        font-size: x-large;
+    }
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #dfdfdf;
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: rgba(25, 25, 25, 1);
+    border-radius: 20px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: rgb(0 0 0 / 20%);
 }

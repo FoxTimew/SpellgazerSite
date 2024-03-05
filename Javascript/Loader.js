@@ -1,8 +1,11 @@
 window.addEventListener('load', function() {
     var loader = document.querySelector('.loader-container');
+    var body = document.body;
 
     // Afficher le contenu et masquer l'écran de chargement
     loader.style.display = 'none';
+    body.style.overflow = 'visible'; 
+    body.style.overflowX = 'hidden'; 
 });
 
 function preloadImages(imageURLs) {
@@ -25,7 +28,6 @@ function preloadImages(imageURLs) {
         // Charger chaque image
         for (var i = 0; i < totalImages; i++) {
             loadImage(imageURLs[i]);
-            //console.log(imageURLs[i] + "Loaded");
         }
     });
 }
@@ -38,10 +40,10 @@ for (var i = 0; i < 567; i++) {
 }
 
 preloadImages(imageURLs).then(function() {
-    //console.log("Toutes les images sont chargées !");
-    // Ici, vous pouvez continuer votre logique JavaScript une fois que toutes les images sont préchargées
 }).catch(function(error) {
     console.error("Erreur lors du chargement des images :", error);
 });
+
+window.scrollTo(0, 0);
 
 console.log("Loader Loaded");
