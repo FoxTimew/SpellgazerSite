@@ -1,11 +1,11 @@
-window.addEventListener('load', function() {
-    var loader = document.querySelector('.loader-container');
-    var body = document.body;
+var anim = document.querySelector('.onboard-anim');
+var imageURLs = [];
+var timeOutDelay = 60000; // 1 minute
+var timer = setTimeout(TimeOut, timeOutDelay);
 
-    // Afficher le contenu et masquer l'écran de chargement
-    loader.style.display = 'none';
-    body.style.overflow = 'visible'; 
-    body.style.overflowX = 'hidden'; 
+window.addEventListener('load', function() {
+    clearTimeout(timer);
+    RemoveLoadingScreen();
 });
 
 function preloadImages(imageURLs) {
@@ -32,14 +32,31 @@ function preloadImages(imageURLs) {
     });
 }
 
-// Exemple d'utilisation :
-var imageURLs = [];
+function RemoveLoadingScreen() {
+    var loader = document.querySelector('.loader-container');
+    var body = document.body;
+
+    // Afficher le contenu et masquer l'écran de chargement
+    loader.style.display = 'none';
+    body.style.overflow = 'visible'; 
+    body.style.overflowX = 'hidden'; 
+}
+
+function TimeOut() {
+    console.log("Le chargement de la page a pris plus d'une minute.");
+    anim.style.display = 'none';
+    RemoveLoadingScreen();
+}
+
+
 
 for (var i = 0; i < 567; i++) {
     imageURLs.push('content/images/img_scroll_anim/' + i.toString().padStart(4, '0') + '.avif');
 }
 
 preloadImages(imageURLs).then(function() {
+    RemoveLoadingScreen();
+    anim.style.display = 'visible';
 }).catch(function(error) {
     console.error("Erreur lors du chargement des images :", error);
 });
