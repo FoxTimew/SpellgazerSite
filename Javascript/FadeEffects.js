@@ -78,6 +78,3 @@ function UpDate() {
         elements[0].style.transform = 'translate(-50%, -50%) scale(' + ScaleCalcultaor(0) + ')';
     }
 }
-
-//         <script src="javascript/YoutubeVideos.js"></script>
-//<script src="https://www.youtube.com/iframe_api"></script>
