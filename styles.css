@@ -1,4 +1,4 @@
-/* #region fonts */
+/* fonts */
 @font-face {
     font-family: 'GaramondExtra';
     src: url('content/fonts/EBGaramond-ExtraBold.ttf') format('ttf');
@@ -12,8 +12,27 @@
     font-weight: bold;
     font-style: italic;
 }
-/* #endregion */
-/* #region generic */
+
+/* scroll bar */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #dfdfdf;
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: rgba(25, 25, 25, 1);
+    border-radius: 20px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: rgb(0 0 0 / 20%);
+}
+
+/* generic */
 body {
     font-family: GaramondExtra;
     font-weight: bold;
@@ -27,8 +46,32 @@ body {
     overflow: hidden;
 }
 
+h2 {
+    font-size: xx-large;
+}
+
 pre {
     font-family: GaramondExtra;
+}
+
+button {
+    background-color: transparent;
+    border: none;
+    cursor: pointer; 
+    transition: filter 0.3s ease;
+}
+
+footer {
+    justify-content: center;
+    background-color: rgba(25, 25, 25, 0.8);
+    backdrop-filter: blur(5px);
+    width: 100vw;
+}
+
+.flex {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .center-horizontally {
@@ -41,182 +84,10 @@ pre {
     transform: translateY(-50%);
 }
 
-.catch-phrase {
-    position: absolute;
-    font-size: 100px;
-    letter-spacing: .5rem;
-    color: white;
-    z-index: -11;
-}
-
-#black-background {
-    position: fixed;
-    background-color: rgba(0, 0, 0, 0);
-    backdrop-filter: blur(0px);
-    width: 100vw;
-    height: 100vh;
-    z-index: -9;
-}
-
-.catch-background {
-    position: absolute;
-    width: 100vw;
-    height: 100%;
-    background-color: rgba(0, 0, 0, .5);
-    z-index: -1;
-}
-
-h2 {
-    font-size: xx-large;
-}
-
-.flex {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-
-footer {
-    justify-content: center;
-    background-color: rgba(25, 25, 25, 0.8);
-    backdrop-filter: blur(5px);
-    width: 100vw;
-}
-
-.footer-text {
-    font-family: Helvetica;
-    color: white;
-}
-/* #endregion */
-
-/* #region main */
-
-/* #region onboard */
-.onboard-anim {
-    width: 100vw;
-}
-
-#img-scroll-anim {
-    height: 7358px;
-}
-
-#img-scroll {
-    position: fixed;
-    width: 1920px;
-    z-index: -10;
-}
-
-#SG-logo {
-    width: 50vw;
-    z-index: -11;
-    position: absolute;
-}
-/* #endregion */
-/* #region game-description */
-.game-description {
-    width: 50vw;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-.segment {
-    padding-top: 20px;
-    padding-bottom: 50px;
-    gap: 50px;
-    overflow: hidden;
-}
-
-.extremity {
-    background-image: url('content/images/game_description/black_top_border_background.png');
-    width: auto;
-    height: 42px;
-    margin-top: -42px;
-}
-
-#sub-footer {
-    transform: scaleY(-1);
-    background-color: #0000;
-    margin-top: 0px;
-    margin-bottom: -42px;
-}
-
-/* #region trailer */
-#trailer-container {
-    background-image: url('content/images/game_description/black_background.avif');
-}
-
-#gameplay-container {
-    background-image: url('content/images/game_description/black_background.avif');
-}
-
-.lore-container {
-    background-image: url('content/images/game_description/gold_background.avif');
-}
-
-.gameplay-catch {
-    gap: 5px;
-    font-family: GaramondExtra;
-    font-style: italic;
-}
-
-.solas-container {
-    width: 100%;
-    height: auto;
-    flex-direction: row;
-    justify-content: center;
-    gap: 20px;
-}
-
-.solas-text-container {
-    width: 40%;
-    height: auto;
-    font-size: x-large;
-    --s: 10px;
-    padding: var(--s);
-    border: calc(2*var(--s)) solid #0000;
-    outline: 1px solid #b59e69;
-    outline-offset: calc(-1*var(--s));
-    background: conic-gradient(from 90deg at 1px 1px,#18473d 25%,#b59e69 0);
-    text-transform: initial;
-}
-
-.solas-title {
-    font-size: xx-large;
-}
-
-.solas-img {
-    height: 50vh;
-    margin-left: -60px; 
-    z-index: 2;
-}
-
-.text-intro-gameplay {
-    width: 75%;
-    text-transform: initial;
-    font-size: x-large;
-    --s: 10px; /* control the size */
-    padding: var(--s);
-    border: calc(2*var(--s)) solid #0000;
-    outline: 1px solid #b59e69;
-    outline-offset: calc(-1*var(--s));
-    background: conic-gradient(from 90deg at 1px 1px,#0000 25%,#b59e69 0);
-}
-
-.objective-text {
-    width: 85%;
-    --s: 10px; /* control the size */
-    padding: var(--s);
-    border: calc(2*var(--s)) solid #0000;
-    outline: 1px solid #b59e69;
-    outline-offset: calc(-1*var(--s));
-    background: conic-gradient(from 90deg at 1px 1px,#18473d 100%,#b59e69 0);
-}
-
-#objective-container {
-    padding-top: 50px;
-    background-image: url('content/images/objective/background.avif');
-    background-size: 100%;
+.slideInSide {
+    opacity: 0;
+    width: 120%;
+    animation: SlideInSide 2s forwards;
 }
 
 .subtitle-container {
@@ -224,84 +95,6 @@ footer {
     flex-direction: row;
     gap: 20px;
 }
-/* #endregion */
-/* #endregion */
-#environment-container {
-    background-color: #18473d;
-    gap: 20px;
-}
-
-.carousel {
-    width: 75%;
-    overflow: hidden;
-    margin: 0;
-}
-
-.carousel-container {
-    flex-direction: unset;
-    transition: transform 0.5s ease;
-}
-
-.carousel-item {
-    flex: 0 0 100%;
-}
-
-.carousel-item img {
-    width: 100%;
-    height: auto;
-}
-
-.carousel-button-container {
-    flex-direction: row;
-}
-
-.carousel-button-arrow {
-    background-image: url('content/images/carousel/right_button.png');
-    background-size: cover;
-    background-color: transparent;
-    width: 44px; 
-    height: 34px; 
-    border: none;
-    cursor: pointer; 
-    transition: filter 0.3s ease;
-    animation: UnhoverArrowButton 0.3s forwards;
-}
-
-.carousel-button-arrow:hover {
-    filter: brightness(1.2);
-    animation: HoverArrowButton 0.3s forwards;
-}
-.previous {
-    transform: scaleX(-1);
-}
-
-.carousel-button-item {
-    background-image: url('content/images/carousel/unselected_puce.png');
-    background-size: cover;
-    background-color: transparent;
-    width: 30px; 
-    height: 31px; 
-    margin: 0 10px;
-    border: none;
-    cursor: pointer; 
-    transition: filter 0.3s ease;    
-}
-
-.carousel-button-item.active {
-    background-image: url('content/images/carousel/selected_puce.png');
-    background-size: cover;
-    background-color: transparent;
-    width: 65px; 
-    height: 66px; 
-    margin: 0 -7.5px;
-    border: none;
-    pointer-events: none;
-}
-
-.carousel-button-item:hover {
-    filter: brightness(1.2);
-}
-/* #endregion */
 
 .arrow-underline {
     animation: growArrow 3s forwards;
@@ -327,33 +120,80 @@ footer {
     background-color: transparent;
 }
 
-.slideInUp {
-    opacity: 0;
-    margin-top: 100px;
-    animation: SlideInUp 2s forwards;
+.frame {
+    --s: 10px;
+    padding: var(--s);
+    border: calc(2*var(--s)) solid #0000;
+    outline: 1px solid #b59e69;
+    outline-offset: calc(-1*var(--s));
+    background: conic-gradient(from 90deg at 1px 1px,#18473d 25%,#b59e69 0);
 }
 
-.slideInSide {
-    opacity: 0;
-    width: 120%;
-    animation: SlideInSide 2s forwards;
+.carousel {
+    width: 75%;
+    overflow: hidden;
 }
 
-.video-container {
-    position: relative;
-    width: 80%;
-    padding-bottom: 45%;
+.carousel-container {
+    flex-direction: unset;
+    transition: transform 0.5s ease;
 }
 
-#player {
-    position: absolute;
-    top: 0;
-    left: 0;
+.carousel-item {
+    flex: 0 0 100%;
+}
+
+.carousel-item img {
     width: 100%;
-    height: 100%;
+    height: auto;
 }
 
-.loader-container {
+.carousel-button-container {
+    flex-direction: row;
+}
+
+.carousel-button-arrow {
+    background-image: url('content/images/carousel/right_button.webp');
+    width: 44px; 
+    height: 34px; 
+    animation: UnhoverArrowButton 0.3s forwards;
+}
+
+.carousel-button-arrow:hover {
+    filter: brightness(1.2);
+    animation: HoverArrowButton 0.3s forwards;
+}
+
+.previous {
+    transform: scaleX(-1);
+}
+
+.carousel-button-item {
+    background-image: url('content/images/carousel/unselected_puce.webp');
+    width: 30px; 
+    height: 31px; 
+    margin: 0 10px;
+    transition: filter 0.3s ease;    
+}
+
+.carousel-button-item.active {
+    background-image: url('content/images/carousel/selected_puce.webp');
+    width: 65px; 
+    height: 66px; 
+    margin: 0 -7.5px;
+    pointer-events: none;
+}
+
+.carousel-button-item:hover {
+    filter: brightness(1.2);
+}
+
+.black-text {
+    color: #141311;
+}
+
+/*loading screen*/
+#loader-container {
     position: fixed;
     top: 0;
     left: 0;
@@ -365,12 +205,128 @@ footer {
 }
 
 .loader {
-    border: 8px solid #f3f3f3; /* couleur de la bordure */
-    border-top: 8px solid #3498db; /* couleur de la bordure de la partie supérieure */
+    border: 8px solid #f3f3f3;
+    border-top: 8px solid #3498db;
     border-radius: 50%;
     width: 50px;
     height: 50px;
-    animation: spin 2s linear infinite; /* animation de rotation */
+    animation: spin 2s linear infinite;
+}
+
+/* hero sequence */
+#hero-sequence-container {
+    height: 7358px;
+}
+
+#hero-sequence-img {
+    position: fixed;
+    width: 1920px;
+    z-index: -10;
+}
+
+.catch-phrase {
+    position: absolute;
+    font-size: 100px;
+    letter-spacing: .5rem;
+    color: white;
+    z-index: -11;
+}
+
+.catch-phrase-background {
+    position: absolute;
+    width: 100vw;
+    height: 100%;
+    background-color: rgba(0, 0, 0, .5);
+    z-index: -1;
+}
+
+#black-background {
+    position: fixed;
+    background-color: rgba(0, 0, 0, 0);
+    backdrop-filter: blur(0px);
+    width: 100vw;
+    height: 100vh;
+    z-index: -9;
+}
+
+#SG-logo {
+    position: absolute;
+    width: 50vw;
+    z-index: -11;
+}
+
+/* game description */
+.game-description {
+    width: 50vw;
+    overflow: hidden;
+}
+
+.segment {
+    padding-top: 20px;
+    padding-bottom: 50px;
+    gap: 50px;
+    background-image: url('content/images/game_description/black_background.avif');
+}
+
+.section-divider {
+    background-image: url('content/images/game_description/black_top_border_background.webp');
+    height: 42px;
+    margin-top: -42px;
+}
+
+.gold-section-divider {
+    background-image: url('content/images/game_description/gold_top_border_background.webp');
+}
+
+.bottom-section-divider {
+    transform: scaleY(-1);
+    margin-bottom: -42px;
+}
+
+/* trailer */
+.video-container {
+    position: relative;
+    width: 80%;
+    padding-bottom: 45%;
+}
+
+#player {
+    position: absolute;
+    top: -20px;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+/* objective */
+.objective-container {
+    padding-top: 50px;
+    background-image: url('content/images/objective/background.avif');
+    background-size: 990px;
+    background-position: center;
+}
+
+.objective-text {
+    width: 85%;
+    background: conic-gradient(from 90deg at 1px 1px,#18473d 100%,#b59e69 0);
+}
+
+/* gameplay */
+.text-intro-gameplay {
+    width: 75%;
+    text-transform: initial;
+    font-size: x-large;
+    background: conic-gradient(from 90deg at 1px 1px,#0000 25%,#b59e69 0);
+}
+
+.gameplay-catch {
+    gap: 5px;
+    font-style: italic;
+}
+
+/* lore */
+.lore-container {
+    background-image: url('content/images/game_description/gold_background.avif');
 }
 
 .lore-text {
@@ -402,7 +358,114 @@ footer {
     width: 50%;
 }
 
-/* #region animations */
+.solas-container {
+    width: 100%;
+    flex-direction: row;
+    justify-content: center;
+    gap: 20px;
+}
+
+.solas-title {
+    font-size: xx-large;
+}
+
+.solas-text-container {
+    width: 40%;
+    font-size: x-large;
+    text-transform: initial;
+}
+
+.solas-img {
+    height: 50vh;
+    margin-left: -60px; 
+    z-index: 2;
+}
+
+/* gallery */
+.gallery-container {
+    background-image: none;
+    background-color: #18473d;
+    gap: 20px;
+}
+
+/* footer */
+.colab {
+    flex-direction: row;
+    gap: 20px;
+}
+
+.footer-text {
+    font-family: Helvetica;
+    color: white;
+}
+
+.logo-button {
+    width: 10rem;
+    height: 5rem;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.spellgazer {
+    background-image: url('content/images/SG_logo.webp');
+}
+
+.rubika {
+    background-image: url('content/images/rubika.webp');
+    background-position: left;
+}
+
+/* responsive */
+@media screen and (max-width: 1600px) {
+    .catch-phrase {
+        font-size: 40px;
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    #hero-sequence {
+        display: none;
+    }
+
+    .game-description {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    /* generic */
+    .carousel {
+        width : 100%;
+    }
+
+    /* gameplay */
+    .gameplay-catch {
+        font-size: x-large;
+    }
+     /* lore */
+    .spellgazer-lore {
+        flex-direction: column;
+    }
+
+    .spellgazer-lore .lore-text {
+        width: 80%;
+    }
+
+    .character {
+        width: 80%;
+    }
+
+    .solas-container {
+        flex-direction: column-reverse;
+    }
+
+    .solas-text-container {
+        width: 60%;
+    }
+}
+
+/* animations */
 @keyframes growArrow {
     0% {
         width: 10px;
@@ -442,23 +505,6 @@ footer {
     }
 }
 
-.logo-button {
-    width: 10rem;
-    height: 5rem;
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center;
-}
-
-.spellgazer {
-    background-image: url('content/images/SG_logo.png');
-}
-
-.rubika {
-    background-image: url('content/images/rubika.png');
-    background-position: left;
-}
-
 @keyframes SlideInSide {
     0% {
         opacity: 0;
@@ -473,69 +519,4 @@ footer {
 @keyframes spin {
     0% { transform: rotate(0deg); }
     100% { transform: rotate(360deg); }
-}
-/* #endregion*/
-
-@media screen and (max-width: 1000px) {
-    .onboard-anim {
-        display: none;
-    }
-
-    .game-description {
-        width: 100%;
-    }
-}
-
-@media screen and (max-width: 1600px) {
-    .catch-phrase {
-        font-size: 40px;
-    }
-}
-
-@media screen and (max-width: 600px) {
-    .spellgazer-lore {
-        flex-direction: column;
-    }
-
-    .spellgazer-lore .lore-text {
-        width: 80%;
-    }
-
-    .character {
-        width: 80%;
-    }
-
-    .carousel {
-        width : 100%;
-    }
-
-    .solas-container {
-        flex-direction: column-reverse;
-    }
-
-    .solas-text-container {
-        width: 60%;
-    }
-
-    .gameplay-catch {
-        font-size: x-large;
-    }
-}
-
-::-webkit-scrollbar {
-    width: 10px;
-}
-
-::-webkit-scrollbar-thumb {
-    background: #dfdfdf;
-    border-radius: 10px;
-}
-
-::-webkit-scrollbar-track {
-    background: rgba(25, 25, 25, 1);
-    border-radius: 20px;
-}
-
-::-webkit-scrollbar-thumb:hover {
-    background: rgb(0 0 0 / 20%);
 }

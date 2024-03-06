@@ -15,8 +15,8 @@ function Reset() {
         e.style.position = 'absolute';
         e.style.zIndex = '-11';
     });
-        background.style.backgroundColor = 'rgba(0, 0, 0, 0)';
-        background.style.backdropFilter = 'blur(0px)';
+    background.style.backgroundColor = 'rgba(0, 0, 0, 0)';
+    background.style.backdropFilter = 'blur(0px)';
 }
 
 function OpacityCalculator(min, max) {

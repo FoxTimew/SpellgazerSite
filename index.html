@@ -3,182 +3,180 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Ceci est la description de la page">
+    <meta name="description" content="Spellgazer is one of the six 5th-year projects of the 2023-2024 class at RUBIKA - Supinfogame.Spellgazer is a 3D, third-person sandbox game. It's a game where you can feel like a magician, restoring the lost magic to the world to survive the impending harsh winter. Observe your environment for traces resembling constellations. Reproduce these patterns on your Astral Wheel to learn magic and unlock multifaceted spells. Play with your spells and discover the extent of their influence on the world around you. Will you succeed in bringing magic back to the world?">
     <title>Spellgazer</title>
     <link rel="icon" href="content/images/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="styles.css">
+    <link rel="preload" fetchpriority="high" as="image" href="content/images/objective/background.avif" type="image/avif">
 </head>
 <body>
     <header></header>
 
     <main class="flex">
-        <section class="onboard-anim">
-            <div id="img-scroll-anim">
-                <pre class="catch-phrase center-horizontally center-vertically flex" id="first-catch">in a world where magic
-was sealed...<div class="catch-background center-horizontally"></div></pre>
-                <pre class="catch-phrase center-horizontally center-vertically" id="second-catch">learn and experiment
-with forgotten spells...</pre>
-                <p class="catch-phrase center-horizontally center-vertically" id="third-catch">to take back the astral magic</p>
-                <img class="center-horizontally" id="img-scroll" src="content/images/img_scroll_anim/0000.avif">
-                <img class="center-horizontally" id="SG-logo" src="content/images/SG_logo.png">
-            </div>
-        </section>
-
-        <div id="black-background"></div>
-
-        <div class="loader-container flex">
+        <div class="flex" id="loader-container">
             <div class="loader"></div>
             <p>It will take less than a minute.</p>
         </div>
 
-        <section class="game-description">
-            <div class="extremity"></div>
-            <nav class="segment flex" id="trailer-container">
+        <div id="hero-sequence">
+            <div id="hero-sequence-container">
+                <pre class="catch-phrase center-horizontally center-vertically flex" id="first-catch">in a world where magic
+was sealed...<div class="catch-phrase-background center-horizontally"></div></pre>
+                <pre class="catch-phrase center-horizontally center-vertically" id="second-catch">learn and experiment
+with forgotten spells...</pre>
+                <p class="catch-phrase center-horizontally center-vertically" id="third-catch">to take back the astral magic</p>
+                <img class="center-horizontally" id="hero-sequence-img" src="content/images/img_scroll_anim/0000.avif" alt="background"/>
+                <img class="center-horizontally" id="SG-logo" src="content/images/SG_logo.webp" alt="Spellgazer logo"/>
+            </div>
+        </div>
+        <div id="black-background"></div>
+
+        <div class="game-description">
+            <div class="section-divider"></div>
+            <section class="trailer-container segment flex">
                 <div class="subtitle-container flex onScrollAnim anim-slideInSide">
-                    <img src="content/images/game_description/gold_subtitle_ornament.png">
+                    <img src="content/images/game_description/gold_subtitle_ornament.webp" alt="Golden ornament"/>
                     <h2>watch the trailer</h2>
                 </div>
-                <nav class="video-container">
+                <div class="video-container">
                     <div id="player"></div>
-                </nav>
-            </nav>
-            <div class="extremity" id="sub-footer"></div>
-            <nav class="segment flex" id="objective-container">
-                <p class="objective-text">Explore the lands of the spellgazers, where knowledge unfolds at every turn.</p>
-            </nav>
-            <div class="extremity"></div>
+                </div>
+            </section>
+            <div class="section-divider bottom-section-divider"></div>
+            
+            <section class="objective-container segment flex">
+                <p class="objective-text frame">Explore the lands of the spellgazers, where knowledge unfolds at every turn.</p>
+            </section>
 
-            <nav class="segment flex" id="gameplay-container">
+            <div class="section-divider"></div>
+            <section class="gameplay-container segment flex">
                 <div class="subtitle-container flex onScrollAnim anim-slideInSide">
-                    <img src="content/images/game_description/gold_subtitle_ornament.png">
+                    <img src="content/images/game_description/gold_subtitle_ornament.webp" alt="Golden ornament"/>
                     <h2>explore your spells</h2>
                 </div>
 
-                <p class="text-intro-gameplay">Experiment with your spells, uncover their mysteries, and embark in a quest to uncover the ancient wisdom of the Spellgazers who have vanished into legend.</p>
+                <p class="text-intro-gameplay frame">Experiment with your spells, uncover their mysteries, and embark in a quest to uncover the ancient wisdom of the Spellgazers who have vanished into legend.</p>
 
                 <div class="onScrollAnim anim-arrow-underline flex">
-                    <img class="left-arrow" src="content/images/arrow.png">
-                    <img class="right-arrow" src="content/images/arrow.png">
+                    <img class="left-arrow" src="content/images/arrow.webp" alt="Left arrow"/>
+                    <img class="right-arrow" src="content/images/arrow.webp" alt="Right arrow"/>
                 </div>
 
                 <div class="carousel flex">
                     <div class="carousel-container flex">
-                        <div class="carousel-item"><img src="content/images/carousel/environment/0.avif"></div>
-                        <div class="carousel-item"><img src="content/images/carousel/environment/1.avif"></div>
-                        <div class="carousel-item"><img src="content/images/carousel/environment/2.avif"></div>
+                        <div class="carousel-item"><img src="content/images/carousel/environment/0.avif" alt="Small star spell description"/></div>
+                        <div class="carousel-item"><img src="content/images/carousel/environment/1.avif" alt ="Shrink and expand spell description"/></div>
+                        <div class="carousel-item"><img src="content/images/carousel/environment/2.avif" alt="Raise earth spell description"/></div>
                     </div>
 
                     <div class="carousel-button-container flex">
-                        <button class="carousel-button-arrow previous" onClick="prev(0)"></button>
-                        <button class="carousel-button-item active" onClick="goToIndex(0, 0)"></button>
-                        <button class="carousel-button-item" onClick="goToIndex(0, 1)"></button>
-                        <button class="carousel-button-item" onClick="goToIndex(0, 2)"></button>
-                        <button class="carousel-button-arrow next" onClick="next(0)"></button>
+                        <button class="carousel-button-arrow previous" onClick="prev(0)" aria-label=" Previous picture"></button>
+                        <button class="carousel-button-item active" onClick="goToIndex(0, 0)" aria-label=" Watch first spell description"></button>
+                        <button class="carousel-button-item" onClick="goToIndex(0, 1)" aria-label="Watch second spell description"></button>
+                        <button class="carousel-button-item" onClick="goToIndex(0, 2)" aria-label="Watch third spell description"></button>
+                        <button class="carousel-button-arrow next" onClick="next(0)" aria-label="Next picture"></button>
                     </div>
                 </div>
                 <div class="gameplay-catch">
                     <p>Let your imagination run wild</p>
                     <p>gaze beyond the stars</p>
                 </div>
-            </nav>
+            </section>
 
-            <div class="extremity" style="background-color: #0000; background-image: url('content/images/game_description/gold_top_border_background.png');"></div>
-
-            <nav class="lore-container segment flex">
+            <div class="section-divider gold-section-divider"></div>
+            <section class="lore-container segment flex">
                 <div class="subtitle-container flex onScrollAnim anim-slideInSide">
-                    <img src="content/images/game_description/black_subtitle_ornament.png">
-                    <h2 style="color: #141311;">A world embedded in fascinating history</h2>
+                    <img src="content/images/game_description/black_subtitle_ornament.webp" alt="Black ornament"/>
+                    <h2 class="black-text">A world embedded in fascinating history</h2>
                 </div>
 
                 <p class="lore-text">A long time ago, in a world where magic comes from the stars and is as common as fire, a group of talented individuals gathered at the top of the tallest mountain to study the heavenly bodies in order to better understand this power and how to control it.</p>
-                <div class="lore-img"><img src="content/images/lore/inside.avif"></div>
+                <div class="lore-img"><img src="content/images/lore/inside.avif" alt="inside architecture"/></div>
 
                 <div class="onScrollAnim anim-arrow-underline flex">
-                    <img class="left-arrow" src="content/images/arrow.png">
-                    <img class="right-arrow" src="content/images/arrow.png">
+                    <img class="left-arrow" src="content/images/arrow.webp" alt="Left arrow"/>
+                    <img class="right-arrow" src="content/images/arrow.webp" alt="Right arrow"/>
                 </div>
 
                 <div class="spellgazer-lore flex">
                     <p class="lore-text">Those were the first Spellgazers, who shared their knowledge with the world, bringing its civilizations to prosperity.</p>
-                    <div class="lore-img character"><img src="content/images/lore/spellgazer.png"></div>
+                    <div class="lore-img character"><img src="content/images/lore/spellgazer.webp" alt="Spellgazer character"/></div>
                 </div>
 
                 <div class="onScrollAnim anim-arrow-underline flex">
-                    <img class="left-arrow" src="content/images/arrow.png">
-                    <img class="right-arrow" src="content/images/arrow.png">
+                    <img class="left-arrow" src="content/images/arrow.webp" alt="Left arrow"/>
+                    <img class="right-arrow" src="content/images/arrow.webp" alt="Right arrow"/>
                 </div>
 
                 <p class="lore-text">And then one day, a great fog engulfed the world, cutting its connection to the stars, resulting in the disappearance of magic and the Spellgazers who mastered it.</p>
-                <div class="lore-img"><img src="content/images/lore/fog.avif"></div>
+                <div class="lore-img"><img src="content/images/lore/fog.avif" alt="constellations"/></div>
 
                 <div class="onScrollAnim anim-arrow-underline flex">
-                    <img class="left-arrow" src="content/images/arrow.png">
-                    <img class="right-arrow" src="content/images/arrow.png">
+                    <img class="left-arrow" src="content/images/arrow.webp" alt="Left arrow"/>
+                    <img class="right-arrow" src="content/images/arrow.webp" alt="Right arrow"/>
                 </div>
 
                 <p class="lore-text">Many searched the lost sanctuary of the Spellgazers looking for the reason of their vanishing and to retrieve their magic, but all of them, without exception, were lost to the fog.</p>
-                <div class="lore-img"><img src="content/images/lore/global.avif"></div>
+                <div class="lore-img"><img src="content/images/lore/global.avif" alt="Spellgazer sanctuary"/></div>
                 <p class="lore-text">...until you arrived.</p>
 
                 <div class="solas-container flex">
-                    <div class="solas-text-container">
+                    <div class="solas-text-container frame">
                         <p class="solas-title">SOLAS</p>
 
                         <div class="onScrollAnim anim-arrow-underline flex">
-                            <img class="left-arrow" src="content/images/arrow.png">
-                            <img class="right-arrow" src="content/images/arrow.png">
+                            <img class="left-arrow" src="content/images/arrow.webp" alt="Left arrow"/>
+                            <img class="right-arrow" src="content/images/arrow.webp" alt="Right arrow"/>
                         </div>
 
                         <p class="solas-text">A hero, seemingly ordinary, steps into the Sanctuary of the Spellgazers. Despite his unassuming appearance, Solas harbor an inner strength and unwavering courage.</p>
                     </div>
-                    <img class="solas-img" src="content/images/lore/solas.png" />
+                    <img class="solas-img" src="content/images/lore/solas.webp" alt="Solas"/>
                 </div>
-            </nav>
+            </section>
+            <div class="section-divider gold-section-divider bottom-section-divider"></div>
 
-            <div class="extremity" id="sub-footer" style="background-color: #0000; background-image: url('content/images/game_description/gold_top_border_background.png');"></div>
-
-            <nav class="segment flex" id="environment-container">
+            <section class="gallery-container segment flex">
                 <div class="subtitle-container flex onScrollAnim anim-slideInSide">
-                    <img src="content/images/game_description/gold_subtitle_ornament.png">
+                    <img src="content/images/game_description/gold_subtitle_ornament.webp" alt="Golden ornament">
                     <h2>gallery</h2>
                 </div>
 
-
                 <div class="carousel flex">
                     <div class="carousel-container flex">
-                        <div class="carousel-item"><img src="content/images/carousel/environment/0.avif"></div>
-                        <div class="carousel-item"><img src="content/images/carousel/environment/1.avif"></div>
-                        <div class="carousel-item"><img src="content/images/carousel/environment/2.avif"></div>
-                        <div class="carousel-item"><img src="content/images/carousel/environment/3.avif"></div>
+                        <div class="carousel-item"><img src="content/images/carousel/environment/0.avif" alt="Environment picture 1"></div>
+                        <div class="carousel-item"><img src="content/images/carousel/environment/1.avif" alt="Environment picture 2"></div>
+                        <div class="carousel-item"><img src="content/images/carousel/environment/2.avif" alt="Environment picture 3"></div>
+                        <div class="carousel-item"><img src="content/images/carousel/environment/3.avif" alt="Environment picture 4"></div>
                     </div>
 
                     <div class="carousel-button-container flex">
-                        <button class="carousel-button-arrow previous" onClick="prev(1)"></button>
-                        <button class="carousel-button-item active" onClick="goToIndex(1, 0)"></button>
-                        <button class="carousel-button-item" onClick="goToIndex(1, 1)"></button>
-                        <button class="carousel-button-item" onClick="goToIndex(1, 2)"></button>
-                        <button class="carousel-button-item" onClick="goToIndex(1, 3)"></button>
-                        <button class="carousel-button-arrow next" onClick="next(1)"></button>
+                        <button class="carousel-button-arrow previous" onClick="prev(1)" aria-label="Previous picture"></button>
+                        <button class="carousel-button-item active" onClick="goToIndex(1, 0)" aria-label="Watch first environment image"></button>
+                        <button class="carousel-button-item" onClick="goToIndex(1, 1)" aria-label="Watch second environment image"></button>
+                        <button class="carousel-button-item" onClick="goToIndex(1, 2)" aria-label="Watch third environment image"></button>
+                        <button class="carousel-button-item" onClick="goToIndex(1, 3)" aria-label="Watch fourth environment image"></button>
+                        <button class="carousel-button-arrow next" onClick="next(1)" aria-label="Next picture"></button>
                     </div>
                 </div>
-            </nav>
-        </section>
+            </section>
+        </div>
 
         <script src="javascript/Loader.js"></script>
-        <script src="javascript/ImgScroll.js"></script>
+        <script src="javascript/HeroSequence.js"></script>
         <script src="javascript/OnScrollAnim.js"></script>
         <script src="javascript/FadeEffects.js"></script>
         <script src="javascript/Carousel.js"></script>
-        <script src="javascript/YoutubeVideos.js"></script>
-        <script src="https://www.youtube.com/iframe_api"></script>
+        <!--<script src="javascript/YoutubeVideos.js"></script>
+        <script src="https://www.youtube.com/iframe_api"></script>-->
     </main>
 
     <footer class="flex">
-        <div class="flex" style="flex-direction: row; align-items: center; gap: 20px;">
-            <a class="logo-button spellgazer" href="#"></a>
+        <nvav class="colab flex">
+            <a class="logo-button spellgazer" href="#" alt="Spellgazer" aria-label="Back to the top"></a>
             <p class="footer-text">X</p>
-            <a class="logo-button rubika" href="https://rubika-edu.com"></a>
-        </div>
+            <a class="logo-button rubika" href="https://rubika-edu.com" alt:="RUBIKA" aria-label="Go to Rubika's web site'"></a>
+        </navs>
     </footer>
 </body>
 </html>

@@ -1,31 +1,28 @@
-// Fonction pour retirer le préfixe "anim-" de la classe
+// remove the "anim-" prefix from class
 function removeAnimationPrefix(entries, observer) {
     entries.forEach(entry => {
         if (entry.isIntersecting) {
             entry.target.classList.forEach(className => {
                 if (className.startsWith('anim-')) {
                     entry.target.classList.remove(className);
-                    entry.target.classList.add(className.slice(5)); // Retire les 5 premiers caractères (anim-)
+                    entry.target.classList.add(className.slice(5));
                 }
             });
         }
     });
 }
         
-// Création de l'objet Intersection Observer
+// Creation of the Intersection Observer
 const observer = new IntersectionObserver(removeAnimationPrefix, {
     root: null,
     rootMargin: '0px',
-    threshold: 0.1 // Modifiez ceci pour ajuster la sensibilité
+    threshold: 0.1
 });
         
-// Sélectionne tous les éléments avec une classe commençant par "anim-"
+// Select every element begining with "anim-"
 const animatedElements = document.querySelectorAll('.onScrollAnim');
 
-// Ajoute chaque élément à l'observateur Intersection Observer
+// Add each element to the Intersection Observer
 animatedElements.forEach(element => {
     observer.observe(element);
 });
-
-
-console.log("OnScrollAnim Loaded");

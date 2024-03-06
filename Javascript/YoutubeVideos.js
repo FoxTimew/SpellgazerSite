@@ -1,4 +1,4 @@
-// Initialiser la vidéo YouTube
+// YouTube video initialisation
 var player;
 function onYouTubeIframeAPIReady() {
     player = new YT.Player('player', {
@@ -19,5 +19,3 @@ function onYouTubeIframeAPIReady() {
 function onPlayerReady(event) {
     event.target.playVideo();
 }
-
-console.log("Youtube Loaded");
