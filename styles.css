@@ -33,6 +33,9 @@
 }
 
 /* generic */
+html {
+    width: 100vw;
+}
 body {
     font-family: GaramondExtra;
     font-weight: bold;
@@ -44,6 +47,10 @@ body {
     background-size: cover;
     margin: 0;
     overflow: hidden;
+}
+
+main{
+    width: 100vw;
 }
 
 h2 {
@@ -126,7 +133,7 @@ footer {
     border: calc(2*var(--s)) solid #0000;
     outline: 1px solid #b59e69;
     outline-offset: calc(-1*var(--s));
-    background: conic-gradient(from 90deg at 1px 1px,#18473d 25%,#b59e69 0);
+    background: conic-gradient(from 90deg at 1px 1px,#525c8a 25%,#b59e69 0);
 }
 
 .carousel {
@@ -188,8 +195,8 @@ footer {
     filter: brightness(1.2);
 }
 
-.black-text {
-    color: #141311;
+.white-text {
+    color: #ffedc1;
 }
 
 /*loading screen*/
@@ -258,7 +265,6 @@ footer {
 /* game description */
 .game-description {
     width: 50vw;
-    overflow: hidden;
 }
 
 .segment {
@@ -266,6 +272,7 @@ footer {
     padding-bottom: 50px;
     gap: 50px;
     background-image: url('content/images/game_description/black_background.avif');
+    overflow: hidden;
 }
 
 .section-divider {
@@ -308,7 +315,7 @@ footer {
 
 .objective-text {
     width: 85%;
-    background: conic-gradient(from 90deg at 1px 1px,#18473d 100%,#b59e69 0);
+    background: conic-gradient(from 90deg at 1px 1px,#525c8a 100%,#b59e69 0);
 }
 
 /* gameplay */
@@ -331,7 +338,7 @@ footer {
 
 .lore-text {
     width: 75%;
-    color: #141311;
+    color: #ffedc1;
     font-size: x-large;
     text-transform: initial;
 }
@@ -384,7 +391,7 @@ footer {
 /* gallery */
 .gallery-container {
     background-image: none;
-    background-color: #18473d;
+    background-color: #525c8a;
     gap: 20px;
 }
 

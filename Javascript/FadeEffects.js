@@ -40,17 +40,18 @@ window.addEventListener('scroll', function () {
 function UpDate() {
     Reset();
 
-    if (scrollPosition >= 7358 + window.innerHeight / 2 - 176/2) {
-        elements[3].style.position = 'absolute';
-        elements[3].style.top = 7358 + window.innerHeight - 176/2 -42 + 'px';
+    if (scrollPosition >= 7358 + window.innerHeight / 2) {
+        elements[3].style.position = 'relative';
+        elements[3].style.top = 7358 + window.innerHeight + 'px';
         elements[3].style.zIndex = '1';
         background.style.backgroundColor = 'rgba(0, 0, 0, 0.6)';
         background.style.backdropFilter = 'blur(4px)';
     }
-    else if (scrollPosition >= 7358 && scrollPosition < 7358 + window.innerHeight - 176/2) {
+    else if (scrollPosition >= 7358 && scrollPosition < 7358 + window.innerHeight) {
         elements[3].style.position = 'fixed';
         elements[3].style.top = '50%';
         elements[3].style.zIndex = '1';
+        elements[3].style.transform = 'translate(-50%, -50%)';
         background.style.backgroundColor = 'rgba(0, 0, 0, ' + (scrollPosition - 7358) / 737 + ')';
         background.style.backdropFilter = 'blur(' + (scrollPosition - 7358) / 110 +'px)';
     }
@@ -58,6 +59,7 @@ function UpDate() {
         elements[3].style.position = 'fixed';
         elements[3].style.zIndex = '1';
         elements[3].style.top = '50%';
+        elements[3].style.transform = 'translate(-50%, -50%)';
     }
     else if (scrollPosition >= 3700 && scrollPosition <= 5000) {
         elements[2].style.position = 'fixed';
