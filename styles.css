@@ -294,7 +294,7 @@ footer {
 .video-container {
     position: relative;
     width: 80%;
-    padding-bottom: 45%;
+    padding-bottom: 25px;
 }
 
 #player {
@@ -303,6 +303,21 @@ footer {
     left: 0;
     width: 100%;
     height: 100%;
+}
+
+.gameplay-text {
+    font-size: x-large;
+    text-transform: initial;
+    outline: 0px solid #b59e69;
+    background: conic-gradient(from 90deg at 1px 1px,#0000 100%,#0000 0);
+    width: 75%
+}
+
+.gameplay-intro {
+    font-size: x-large;
+    outline: 1px solid #b59e69;
+    background: conic-gradient(from 90deg at 1px 1px,#0000 100%,#0000 0);
+    width: 75%
 }
 
 /* objective */
